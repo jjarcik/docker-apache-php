@@ -1,0 +1,11 @@
+version: '2'
+services:
+    apache:
+        build:
+            context: ./apache
+            dockerfile: Dockerfile
+        ports:
+         - 80:80
+        volumes:
+         - ./apache/src:/var/www/html/
+
